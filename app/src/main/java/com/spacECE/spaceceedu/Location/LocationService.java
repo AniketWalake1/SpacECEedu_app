@@ -21,7 +21,7 @@ public class LocationService extends Activity {
     private LocationManager locationManager;
     private LocationListener locationListener;
 
-    private String url = "http://spacefoundation.in/test/SpacECE-PHP/api/add_tracking_api.php";
+    private String url = "http://43.205.45.96/api/add_tracking_api.php";
 
     public void Start(Context context, Activity activity) {
 

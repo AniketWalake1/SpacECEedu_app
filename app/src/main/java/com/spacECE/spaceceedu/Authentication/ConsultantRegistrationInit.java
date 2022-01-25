@@ -2,6 +2,7 @@ package com.spacECE.spaceceedu.Authentication;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.util.Log;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -37,6 +38,8 @@ public class ConsultantRegistrationInit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultant_registration);
         Button b_register=findViewById(R.id.ConsultantRegistration_Button_Signup);
+
+        Log.e( "2 auth ","----------------------------------------------");
 
         Type = findViewById(R.id.Type);
         Language = findViewById(R.id.Consultant_Language);

@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //this is not working right now but this is to know when someone installs the app for the first time
-                UsefulFunctions.UsingGetAPI("http://educationfoundation.space/ConsultUs/api_token?email="+ACCOUNT.getAccount_id()+"&token="+token);
+                UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_token.php?email="+ACCOUNT.getAccount_id()+"&token="+token);
             }
         });
         thread.start();
@@ -338,7 +338,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
 
-                apiCall[0] = UsefulFunctions.UsingGetAPI("http://educationfoundation.space/spacece/api/spaceactive_activities.php?ano=1");
+                apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/api/spaceactive_activities.php?ano=1");
                 Log.d(TAG, "Object Obtained "+apiCall[0].toString());
 
                 GsonBuilder gsonBuilder = new GsonBuilder();

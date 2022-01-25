@@ -2,6 +2,7 @@ package com.spacECE.spaceceedu.Authentication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 import com.spacECE.spaceceedu.Authentication.Account;
 
@@ -15,6 +16,8 @@ public class UserLocalStore {
     }
 
     public Account getLoggedInAccount() {
+        Log.e( "7 auth ","----------------------------------------------");
+
         String name = userLocalDatabase.getString("username", null);
         String account_id = userLocalDatabase.getString("account_id", null);
         String contact_number = userLocalDatabase.getString("contact_number", null);
@@ -27,6 +30,9 @@ public class UserLocalStore {
     }
 
     public void setUserLoggedIn(boolean loggedIn, Account account) {
+
+        Log.e( "7 auth ","----------------------------------------------");
+
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         if(account.isCONSULTANT()){
             spEditor.putBoolean("loggedIn", loggedIn);

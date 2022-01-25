@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,9 @@ public class RegistrationSelection extends AppCompatActivity {
         setContentView(R.layout.activity_registration_selection);
         Button b_User=findViewById(R.id.Registration_Selection_Button_User);
         Button b_Consultant= findViewById(R.id.Registration_Selection_Button_Consultant);
+
+        Log.e( "6 auth ","----------------------------------------------");
+
 
 
         b_Consultant.setOnClickListener(new View.OnClickListener() {

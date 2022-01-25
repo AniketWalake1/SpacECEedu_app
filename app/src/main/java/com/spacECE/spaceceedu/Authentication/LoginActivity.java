@@ -42,6 +42,8 @@ public class LoginActivity extends AppCompatActivity {
         //what is this?
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+        Log.e( "3 auth ","----------------------------------------------");
+
         userLocalStore = new UserLocalStore(getApplicationContext());
 
         et_email = findViewById(R.id.editTextText_EmailAddress);
@@ -93,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public void logIn(String email, String password) {
 
-        String login = "http://spacefoundation.in/test/SpacECE-PHP/spacece_auth/login_action.php";
+        String login = "http://43.205.45.96/spacece_auth/login_action.php";
 
         new Thread(new Runnable() {
 

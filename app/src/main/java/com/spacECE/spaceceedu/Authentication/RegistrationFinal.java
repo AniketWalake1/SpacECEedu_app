@@ -53,6 +53,8 @@ public class RegistrationFinal extends AppCompatActivity {
         setContentView(R.layout.activity_user_registration);
 
         userLocalStore = new UserLocalStore(getApplicationContext());
+        Log.e( "5 auth ","----------------------------------------------");
+
 
         b_register= findViewById(R.id.UserRegistration_Button_Signup);
         iv_profile_pic= findViewById(R.id.UserRegistration_ImageView_ProfilePic);
@@ -194,7 +196,7 @@ public class RegistrationFinal extends AppCompatActivity {
 
     private void sendUserRegistration(String name, String email, String password, String phone, Uri image){
 
-        String register = "http://spacefoundation.in/test/SpacECE-PHP/spacece_auth/register_action.php";
+        String register = "http://43.205.45.96/spacece_auth/register_action.php";
 
         new Thread(new Runnable() {
 

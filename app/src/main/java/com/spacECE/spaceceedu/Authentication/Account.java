@@ -19,6 +19,9 @@ public class Account {
     static private String Consultant_Qualification;
 
     public Account(String account_id, String username, String contact_number, boolean CONSULTANT, String profile_pic) {
+
+        Log.e( "1 auth ","----------------------------------------------");
+
         this.account_id = account_id;
         this.username = username;
         this.contact_number = contact_number;
@@ -30,6 +33,8 @@ public class Account {
     public Account(String account_id, String username, String contact_number, boolean CONSULTANT, String profile_pic,
                    String Consultant_Category, @Nullable String Consultant_Office, String Consultant_StartTime, String Consultant_EndTime,
                    String Consultant_Language, String Consultant_Fee, String Consultant_Qualification) {
+
+        Log.e( "1 auth ","----------------------------------------------");
 
         this.account_id = account_id;
         this.username = username;

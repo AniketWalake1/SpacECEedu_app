@@ -79,7 +79,7 @@ public class ConsultantProfile extends AppCompatActivity {
         tv_days.setText(String.valueOf(days_from.charAt(0))+days_from.charAt(1)+days_from.charAt(2)+" - "+days_to.charAt(0)+days_to.charAt(1)+days_to.charAt(2));
 
         try {
-            pic_src = "https://spacefoundation.in/test/SpacECE-PHP/img/users/" + pic_src;
+            pic_src = "https://43.205.45.96/img/users/" + pic_src;
             Picasso.get().load(pic_src.replace("https://","http://")).into(iv_profilePic);
         } catch (Exception e) {
             e.printStackTrace();

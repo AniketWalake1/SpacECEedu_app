@@ -198,7 +198,7 @@ public class Agoraa extends AppCompatActivity {
                         .build();
 
                 Request request = new Request.Builder()
-                        .url("http://spacefoundation.in/test/SpacECE-PHP/ConsultUs/agoracallapi.php")
+                        .url("http://43.205.45.96/ConsultUs/agoracallapi.php")
                         .post(fromBody)
                         .build();
 

@@ -33,7 +33,7 @@ public class VideoLibrary_Activity_SplashScreen extends AppCompatActivity {
 
             try {
 
-                apiCall[0] = UsefulFunctions.UsingGetAPI("http://educationfoundation.space/SpacTube/api_all?uid=1&type=all");
+                apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/SpacTube/api_all.php?uid=1&type=all");
                 Log.i("Object Obtained: ", apiCall[0].toString());
 
                 JSONArray jsonArray = null;

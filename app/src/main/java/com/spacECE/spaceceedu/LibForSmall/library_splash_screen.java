@@ -1,14 +1,19 @@
-package com.spacECE.spaceceedu.LearnOnApp;
+package com.spacECE.spaceceedu.LibForSmall;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.spacECE.spaceceedu.LibForSmall.Library_main;
+import com.spacECE.spaceceedu.LibForSmall.books;
 import com.spacECE.spaceceedu.MainActivity;
 import com.spacECE.spaceceedu.R;
 import com.spacECE.spaceceedu.Utils.UsefulFunctions;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,25 +21,23 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class LearnOn_List_SplashScreen extends AppCompatActivity {
+public class library_splash_screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
+        setContentView(R.layout.activity_library_splash_screen);
 
         LoadList();
-
     }
 
     void LoadList() {
-
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 final JSONObject apiCall;
                 try{
-                    apiCall = UsefulFunctions.UsingGetAPI("http://43.205.45.96/api/learnonapp_courses.php");
+                    apiCall = UsefulFunctions.UsingGetAPI("http://43.205.45.96/libforsmall/allproductlist.php");
                     JSONArray jsonArray = null;
                     try {
                         try {
@@ -44,7 +47,7 @@ public class LearnOn_List_SplashScreen extends AppCompatActivity {
                             e.printStackTrace();
 
                             runOnUiThread(() -> {
-                                new AlertDialog.Builder(LearnOn_List_SplashScreen.this)
+                                new AlertDialog.Builder(library_splash_screen.this)
                                         .setTitle("Internet Not Working!")
                                         .setMessage("Do you want to retry ?")
 
@@ -57,7 +60,7 @@ public class LearnOn_List_SplashScreen extends AppCompatActivity {
                                         .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                Intent intent = new Intent(LearnOn_List_SplashScreen.this, MainActivity.class);
+                                                Intent intent = new Intent(library_splash_screen.this, Library_main.class);
                                                 startActivity(intent);
                                                 finish();
                                             }
@@ -72,21 +75,23 @@ public class LearnOn_List_SplashScreen extends AppCompatActivity {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    LearnOn_Main.Llist = new ArrayList<>();
+                    Library_main.list = new ArrayList<>();
                     try {
+                        Log.d("TAG", "run: "+jsonArray.length());
                         for (int i = 0; i < Objects.requireNonNull(jsonArray).length(); i++) {
                             JSONObject response_element = new JSONObject(String.valueOf(jsonArray.getJSONObject(i)));
-                            Learn temp = new Learn(response_element.getString("id"), response_element.getString("title"),
-                                    response_element.getString("description"), response_element.getString("type"),
-                                    response_element.getString("mode"), response_element.getString("duration"),
-                                    response_element.getString("price"));
-                            LearnOn_Main.Llist.add(temp);
+                            books temp = new books(response_element.getString("product_id"),response_element.getString("product_title"),
+                                    response_element.getString("product_price"),response_element.getString("product_keywords"),
+                                    response_element.getString("product_image"),response_element.getString("product_desc"),
+                                    response_element.getString("product_brand"), response_element.getString("rent_price"),
+                                    response_element.getString("exchange_price"),response_element.getString("deposit"));
+                            Library_main.list.add(temp);
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
-                    Intent intent = new Intent(LearnOn_List_SplashScreen.this, LearnOn_Main.class);
+                    Intent intent = new Intent(library_splash_screen.this, Library_main.class);
                     startActivity(intent);
                     finish();
 
@@ -96,9 +101,6 @@ public class LearnOn_List_SplashScreen extends AppCompatActivity {
             }
         });
 
-
         thread.start();
-
     }
-
 }
