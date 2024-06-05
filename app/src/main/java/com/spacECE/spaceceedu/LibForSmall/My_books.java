@@ -28,6 +28,7 @@ public class My_books extends AppCompatActivity {
         Thread thread = new Thread(() -> {
 
             try {
+                Log.e( "onCreate:123456789","1234567890");
                 apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_user_appoint.php?user=raju%20rastogi");
                 try {
                     Log.i("Object Obtained: ", apiCall[0].get("data").toString());

@@ -33,6 +33,9 @@ import com.google.gson.GsonBuilder;
 import com.spacECE.spaceceedu.Authentication.Account;
 import com.spacECE.spaceceedu.Authentication.LoginActivity;
 import com.spacECE.spaceceedu.Authentication.UserLocalStore;
+import com.spacECE.spaceceedu.ConsultUS.Consultant_Main;
+import com.spacECE.spaceceedu.LearnOnApp.LearnOn_Main;
+import com.spacECE.spaceceedu.LibForSmall.Library_main;
 import com.spacECE.spaceceedu.Location.LocationService;
 import com.spacECE.spaceceedu.Utils.Notification;
 import com.spacECE.spaceceedu.Utils.UsefulFunctions;
@@ -104,15 +107,15 @@ public class MainActivity extends AppCompatActivity {
 
         userLocalStore = new UserLocalStore(getApplicationContext());
 
-        Log.i("DEVICE TOKEN","In next line");
+        Log.i("DEVICE TOKEN", "In next line");
         //Android ID:
         //Log.i("DEVICE TOKEN : ",Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
 
-        if(authenticate()){
+        /*if (authenticate()) {
             getDetails();
-        }
+        }*/
 
         if (firstStart) {
             //causing crash on first boot TODO
@@ -136,17 +139,66 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Firebase Cloud Messaging for PushNotification
-        FirebaseMessaging.getInstance().subscribeToTopic("Notify");
+        try {
+            FirebaseMessaging.getInstance().subscribeToTopic("Notify");
+        } catch (Exception e) {
+            Log.e("onCreate:o;jbo;n", e.toString());
+        }
+
 
         //Bottom navigation bar
-        BottomNavigationView bottomNav = findViewById(R.id.Main_Bottom_Navigation);
-        bottomNav.setOnItemSelectedListener(navListener);
+        /*BottomNavigationView bottomNav = findViewById(R.id.Main_Bottom_Navigation);
+        bottomNav.setOnItemSelectedListener(navListener);*/
 
         //Navigation Drawer
         drawer = findViewById(R.id.Main_NavView_drawer);
 
+        View signUp = findViewById(R.id.rectangle_3);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        View consult = findViewById(R.id.consultUsAction);
+        consult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Consultant_Main.class);
+                startActivity(i);
+            }
+        });
+
+        View libForSmall = findViewById(R.id.libForSmallAction);
+        libForSmall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Library_main.class);
+                startActivity(i);
+            }
+        });
+
+        View spaceTube = findViewById(R.id.spaceTubeAction);
+        spaceTube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, VideoLibrary_Activity.class);
+                startActivity(i);
+            }
+        });
+
+        View learnOnApp = findViewById(R.id.learnOnAppAction);
+        learnOnApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LearnOn_Main.class);
+                startActivity(i);
+            }
+        });
         //Toolbar support for navigationDrawer
-        toolbar =  findViewById(R.id.toolbar);
+        /*toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         //NavigationDrawer
@@ -356,7 +408,31 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return null;
-        }
+        }*/
+
+        NavigationBarView.OnItemSelectedListener navListener =
+                new NavigationBarView.OnItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        Fragment selectedFragment = null;
+
+                        switch (item.getItemId()) {
+                            case R.id.nav_home:
+                                selectedFragment = new FragmentMain();
+                                break;
+                            case R.id.nav_profile:
+                                selectedFragment = new FragmentProfile();
+                                break;
+                            case R.id.nav_help:
+                                selectedFragment = new FragmentAbout();
+                                break;
+                        }
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Main_Fragment_layout,
+                                selectedFragment).commit();
+
+                        return true;
+                    }
+                };
     }
 
 }

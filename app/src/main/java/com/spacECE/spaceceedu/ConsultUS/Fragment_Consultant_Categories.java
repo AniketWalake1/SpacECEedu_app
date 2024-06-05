@@ -60,8 +60,8 @@ public class Fragment_Consultant_Categories extends Fragment {
     private void setAdapter(ArrayList<ConsultantCategory> myList) {
         Log.i("SetAdapter:", "Working");
         setOnClickListener();
-        adapter = new Consultant_Categories_RecyclerAdapter(myList, listener);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 2, LinearLayoutManager.VERTICAL, false);
+        adapter = new Consultant_Categories_RecyclerAdapter(myList, listener,getContext());
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 1, LinearLayoutManager.VERTICAL, false);
         categoryRecyclerView.setLayoutManager(layoutManager);
         categoryRecyclerView.setItemAnimator(new DefaultItemAnimator());
         categoryRecyclerView.setAdapter(adapter);

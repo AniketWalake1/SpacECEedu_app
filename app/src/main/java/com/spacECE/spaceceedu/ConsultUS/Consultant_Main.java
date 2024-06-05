@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -62,6 +63,8 @@ public class Consultant_Main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultant_main);
+
+        getWindow().setStatusBarColor(ContextCompat.getColor(Consultant_Main.this,R.color.black));
 
         BottomNavigationView bottomNav = findViewById(R.id.Consultant_Main_BottomNav);
         bottomNav.setOnItemSelectedListener(navListener);

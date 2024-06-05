@@ -271,6 +271,7 @@ public class RegistrationFinal extends AppCompatActivity {
                             .build();
                 }
 
+                Log.e( "run: pwndsfcnek", name +".jpeg --link");
                 Request request = new Request.Builder()
                         .url(register)
                         .post(fromBody)

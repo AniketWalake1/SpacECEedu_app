@@ -42,6 +42,7 @@ public class UserLocalStore {
             spEditor.putString("UID", account.getuId());
             spEditor.putBoolean("isConsultant", account.isCONSULTANT());
             spEditor.putString("profile_pic", account.getProfile_pic());
+            Log.e( "UserLocalStore",account.getProfile_pic()+"---link");
             spEditor.putString("consultant_category", account.getConsultant_Category());
             spEditor.putString("consultant_office", account.getConsultant_Office());
             spEditor.putString("consultant_start_time", account.getConsultant_StartTime());
