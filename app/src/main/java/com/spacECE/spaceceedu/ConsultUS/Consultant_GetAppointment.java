@@ -1,6 +1,9 @@
 package com.spacECE.spaceceedu.ConsultUS;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
+=======
+>>>>>>> origin/khushi
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -9,12 +12,18 @@ import android.os.Build;
 import android.util.Log;
 import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.core.content.ContextCompat;
+=======
+>>>>>>> origin/khushi
 
 import android.os.Bundle;
 import android.view.View;
 
+<<<<<<< HEAD
 import com.google.android.datatransport.cct.internal.LogEvent;
+=======
+>>>>>>> origin/khushi
 import com.instamojo.android.Instamojo;
 import com.spacECE.spaceceedu.MainActivity;
 import com.spacECE.spaceceedu.R;
@@ -57,12 +66,18 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
     private Boolean Time_picked = false;
     private String BOOKING_DAY, BOOKING_TIME;
 
+<<<<<<< HEAD
     @SuppressLint("SetTextI18n")
+=======
+>>>>>>> origin/khushi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultant_get_appointment);
+<<<<<<< HEAD
         getWindow().setStatusBarColor(ContextCompat.getColor(Consultant_GetAppointment.this,R.color.orange));
+=======
+>>>>>>> origin/khushi
 
         tv_charges = findViewById(R.id.Consultant_GetAppointment_textView_Charges);
         tv_name = findViewById(R.id.Consultant_GetAppointment_Name);
@@ -84,18 +99,29 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
 
         }
         tv_speciality.setText(speciality);
+<<<<<<< HEAD
         tv_charges.append(fee);
         tv_name.setText(name);
         tv_time.setText(timing_from.substring(0,5)+" - "+timing_to.substring(0,5));
+=======
+        tv_charges.setText(fee);
+        tv_name.setText(name);
+        tv_time.setText("Available from "+timing_from.substring(0,5)+" - "+timing_to.substring(0,5));
+>>>>>>> origin/khushi
 
         System.out.println(pic_src);
 
         try {
             Picasso.get().load(pic_src.replace("https://","http://")).into(iv_profile);
+<<<<<<< HEAD
             Log.e("onCreate:1",Picasso.get().load(pic_src.replace("https://","http://"))+"");
 
         } catch (Exception e) {
             Log.e( "onCreate:2",e.toString());
+=======
+        } catch (Exception e) {
+            e.printStackTrace();
+>>>>>>> origin/khushi
         }
 
         clock = findViewById(R.id.Clock);
@@ -251,7 +277,11 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
 
             JSONObject jsonObject;
 
+<<<<<<< HEAD
             final String booking = "http://spacefoundation.in/test/SpacECE-PHP/ConsultUs/api_bookappointment.php";
+=======
+            final String booking = "http://43.205.45.96/ConsultUs/api_bookappointment.php";
+>>>>>>> origin/khushi
 
             @Override
             public void run() {

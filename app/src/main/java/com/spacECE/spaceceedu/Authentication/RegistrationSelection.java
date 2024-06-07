@@ -4,6 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+<<<<<<< HEAD
+=======
+import android.util.Log;
+>>>>>>> origin/khushi
 import android.view.View;
 import android.widget.Button;
 
@@ -18,6 +22,12 @@ public class RegistrationSelection extends AppCompatActivity {
         Button b_User=findViewById(R.id.Registration_Selection_Button_User);
         Button b_Consultant= findViewById(R.id.Registration_Selection_Button_Consultant);
 
+<<<<<<< HEAD
+=======
+        Log.e( "6 auth ","----------------------------------------------");
+
+
+>>>>>>> origin/khushi
 
         b_Consultant.setOnClickListener(new View.OnClickListener() {
             @Override

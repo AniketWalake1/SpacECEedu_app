@@ -11,6 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
+<<<<<<< HEAD
+=======
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20ssp"
+        android:textAlignment="center"
+>>>>>>> origin/khushi
         android:text="Login to view you appointments"
         android:layout_gravity="center"/>
     <ScrollView
@@ -23,16 +29,28 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/Appointments_For_Users_RecyclerView"
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="match_parent"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
+=======
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+>>>>>>> origin/khushi
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_weight="1"
+<<<<<<< HEAD
+=======
+        tools:ignore="InefficientWeight"
+>>>>>>> origin/khushi
         tools:listitem="@layout/consultus_appointments_list_item"/>
 
 

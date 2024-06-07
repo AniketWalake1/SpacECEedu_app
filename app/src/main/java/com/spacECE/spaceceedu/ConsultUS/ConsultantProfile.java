@@ -1,10 +1,15 @@
 package com.spacECE.spaceceedu.ConsultUS;
 
 import androidx.appcompat.app.AppCompatActivity;
+<<<<<<< HEAD
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.hardware.camera2.params.BlackLevelPattern;
+=======
+
+import android.content.Intent;
+>>>>>>> origin/khushi
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,7 +33,10 @@ public class ConsultantProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consultant_profile);
+<<<<<<< HEAD
         getWindow().setStatusBarColor(ContextCompat.getColor(ConsultantProfile.this,R.color.black));
+=======
+>>>>>>> origin/khushi
 
         tv_name = findViewById(R.id.Consultant_Profile_textView_Name);
         iv_profilePic = findViewById(R.id.Consultant_Profile_ImageView_ProfilePic);
@@ -72,6 +80,7 @@ public class ConsultantProfile extends AppCompatActivity {
         }
 
 
+<<<<<<< HEAD
         tv_qualification.append(qualification);
         tv_name.setText(name);
         tv_chambers.append(address);
@@ -83,6 +92,19 @@ public class ConsultantProfile extends AppCompatActivity {
 
         try {
             pic_src = "http://43.205.45.96/img/users/" + pic_src;
+=======
+        tv_qualification.setText(qualification);
+        tv_name.setText(name);
+        tv_chambers.setText(address);
+        tv_speciality.setText(speciality);
+        tv_charges.setText(fee+" /-");
+        tv_timing.setText(timing_from.substring(0,5)+" - "+timing_to.substring(0,5));
+        tv_language.setText(language);
+        tv_days.setText(String.valueOf(days_from.charAt(0))+days_from.charAt(1)+days_from.charAt(2)+" - "+days_to.charAt(0)+days_to.charAt(1)+days_to.charAt(2));
+
+        try {
+            pic_src = "https://43.205.45.96/img/users/" + pic_src;
+>>>>>>> origin/khushi
             Picasso.get().load(pic_src.replace("https://","http://")).into(iv_profilePic);
         } catch (Exception e) {
             e.printStackTrace();

@@ -100,7 +100,11 @@ public class TopicActivity extends AppCompatActivity {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
+<<<<<<< HEAD
                     UsefulFunctions.UsingGetAPI("http://3.109.14.4/SpacTube/api_extractlike?uid="+ MainActivity.ACCOUNT.getuId() +"2&vid=3"+ finalV_id);}});
+=======
+                    UsefulFunctions.UsingGetAPI("http://43.205.45.96/SpacTube/api_extractlike.php?uid="+ MainActivity.ACCOUNT.getuId() +"2&vid=3"+ finalV_id);}});
+>>>>>>> origin/khushi
                     thread.start();
 
                 }
@@ -113,7 +117,11 @@ public class TopicActivity extends AppCompatActivity {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
+<<<<<<< HEAD
                     UsefulFunctions.UsingGetAPI("http://3.109.14.4/SpacTube/api_getDisLike?uid="+MainActivity.ACCOUNT.getuId()+"2&vid="+finalV_id);}});
+=======
+                    UsefulFunctions.UsingGetAPI("http://43.205.45.96/SpacTube/api_getDisLike.php?uid="+MainActivity.ACCOUNT.getuId()+"2&vid="+finalV_id);}});
+>>>>>>> origin/khushi
                     thread.start();
                 }
             });
@@ -136,7 +144,11 @@ public class TopicActivity extends AppCompatActivity {
                     Thread thread = new Thread(new Runnable() {
                         @Override
                         public void run() {
+<<<<<<< HEAD
                            UsefulFunctions.UsingGetAPI("http://3.109.14.4/SpacTube/api_extractlike?uid="+ MainActivity.ACCOUNT.getuId() +"2&vid=3"+ comment);}});
+=======
+                           UsefulFunctions.UsingGetAPI("http://43.205.45.96/SpacTube/api_extractlike.php?uid="+ MainActivity.ACCOUNT.getuId() +"2&vid=3"+ comment);}});
+>>>>>>> origin/khushi
                     thread.start();
                     commentText.clearComposingText();
                 }});

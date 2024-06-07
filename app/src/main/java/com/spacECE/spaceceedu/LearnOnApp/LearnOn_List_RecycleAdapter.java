@@ -31,14 +31,21 @@ public class LearnOn_List_RecycleAdapter extends RecyclerView.Adapter<LearnOn_Li
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, Instamojo.InstamojoPaymentCallback {
+<<<<<<< HEAD
         private final TextView tv_category, duration, price;
+=======
+        private final TextView tv_category;
+>>>>>>> origin/khushi
         private final Button tv_enroll;
 
         public MyViewHolder(@NonNull View view) {
             super(view);
             tv_category = view.findViewById(R.id.LearnOn_List_ListItem_TextView_CategoryName);
+<<<<<<< HEAD
             duration = view.findViewById(R.id.ShowCourseStartingDate);
             price = view.findViewById(R.id.ShowCoursePrice);
+=======
+>>>>>>> origin/khushi
             view.setOnClickListener(this);
             tv_enroll = view.findViewById(R.id.Enroll);
             tv_enroll.setOnClickListener(v -> {
@@ -80,8 +87,11 @@ public class LearnOn_List_RecycleAdapter extends RecyclerView.Adapter<LearnOn_Li
     @Override
     public void onBindViewHolder(@NonNull @NotNull MyViewHolder holder, int position) {
         holder.tv_category.setText(Llist.get(position).getTitle());
+<<<<<<< HEAD
         holder.price.setText(Llist.get(position).getPrice());
         holder.duration.setText(Llist.get(position).getDuration());
+=======
+>>>>>>> origin/khushi
     }
 
     @Override

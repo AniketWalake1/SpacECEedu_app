@@ -11,7 +11,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.widget.TextView;
+=======
+>>>>>>> origin/khushi
 import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
@@ -33,7 +36,10 @@ public class LearnOn_Main extends AppCompatActivity {
     public static ArrayList<Learn> Llist = new ArrayList<>();
     Fragment fragment = new LearnOn_List();
     BottomNavigationView bottomNavigationView;
+<<<<<<< HEAD
     TextView showCourseList;
+=======
+>>>>>>> origin/khushi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +49,11 @@ public class LearnOn_Main extends AppCompatActivity {
 
 //        BottomNavigationView
         bottomNavigationView=findViewById(R.id.bottom_navigation_learn);
+<<<<<<< HEAD
         showCourseList = findViewById(R.id.ShowWhichListIsSelected);
 
+=======
+>>>>>>> origin/khushi
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -53,14 +62,20 @@ public class LearnOn_Main extends AppCompatActivity {
                     case R.id.allCourse:
 //                          You Just Attach Here Fragment Manager Here Of All Course
 //                            getSupportFragmentManager().beginTransaction().replace(R.id.LearnOnMain_Frame, fragment).commit();
+<<<<<<< HEAD
                             showCourseList.setText("All Course");
+=======
+>>>>>>> origin/khushi
                             Toast.makeText(getApplicationContext(), "All Course", Toast.LENGTH_SHORT).show();
                             break;
 
                     case R.id.myCourse:
 //                          You just Attach Here Fragment Manager Here Of My Course
 //                            getSupportFragmentManager().beginTransaction().replace(R.id.LearnOnMain_Frame, fragment).commit();
+<<<<<<< HEAD
                         showCourseList.setText("My Course");
+=======
+>>>>>>> origin/khushi
                             Toast.makeText(getApplicationContext(), "My Course", Toast.LENGTH_SHORT).show();
                             break;
                 }

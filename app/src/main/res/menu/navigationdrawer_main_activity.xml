@@ -6,6 +6,7 @@
     <item android:id="@+id/Home"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24"/>
+<<<<<<< HEAD
     <item android:id="@+id/payments"
         android:title="Payments"
         android:icon="@drawable/ic_payment"/>
@@ -21,5 +22,17 @@
     <item android:id="@+id/AboutUs"
         android:title="About us"
         android:icon="@drawable/ic_aboutus_nav_dra"/>
+=======
+        <item android:id="@+id/payments"
+            android:title="Payments"/>
+        <item android:id="@+id/profile"
+            android:title="My Profile"/>
+        <item android:id="@+id/settings"
+            android:title="Settings"/>
+        <item android:id="@+id/Signout"
+            android:title="Signout"/>
+        <item android:id="@+id/AboutUs"
+            android:title="About us"/>
+>>>>>>> origin/khushi
 
 </menu>

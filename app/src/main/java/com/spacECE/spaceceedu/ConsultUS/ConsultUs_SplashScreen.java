@@ -34,6 +34,10 @@ public class ConsultUs_SplashScreen extends AppCompatActivity {
                 final JSONObject apiCall;
                 try{
                     apiCall = UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_category.php?category=all");
+<<<<<<< HEAD
+=======
+                    //apiCall = UsefulFunctions.UsingGetAPI("http://spacefoundation.in/test/SpacECE-PHP/ConsultUs/api_category.php?category=all");
+>>>>>>> origin/khushi
                     JSONArray jsonArray = null;
                     try {
                         try {

@@ -15,9 +15,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
+<<<<<<< HEAD
                 android:layout_margin="6.50dp"
                 android:layout_width="65.00dp"
                 android:layout_height="65dp"
+=======
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+>>>>>>> origin/khushi
                 android:background="@color/white"
                 android:id="@+id/consult_us_after"
                 android:contentDescription="consultus_pic"
@@ -26,10 +32,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="viewStart"
+<<<<<<< HEAD
                 android:layout_margin="6.50dp"
                 android:layout_centerInParent="true"
                 android:textColor="@color/black"
                 android:textSize="20.80dp"
+=======
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_16ssp"
+>>>>>>> origin/khushi
                 android:layout_toEndOf="@+id/consult_us_after"
                 android:text="Consultants" />
         </RelativeLayout>

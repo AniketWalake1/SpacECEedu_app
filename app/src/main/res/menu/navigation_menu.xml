@@ -3,6 +3,7 @@
 
     <item
         android:id="@+id/allCourse"
+<<<<<<< HEAD
         android:title="All Course"
         android:icon="@drawable/allcoursesicon" />
 
@@ -10,5 +11,12 @@
         android:id="@+id/myCourse"
         android:title="My Course"
         android:icon="@drawable/mylearing" />
+=======
+        android:title="All Course"/>
+
+    <item
+        android:id="@+id/myCourse"
+        android:title="My Course"/>
+>>>>>>> origin/khushi
 
 </menu>

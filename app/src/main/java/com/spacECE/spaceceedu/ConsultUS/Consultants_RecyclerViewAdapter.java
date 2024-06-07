@@ -60,7 +60,11 @@ public class Consultants_RecyclerViewAdapter extends RecyclerView.Adapter<Consul
         holder.price.setText("Fee: "+String.valueOf(price)+"/-");
         //currently, src only send image name we have to set the image path
         try {
+<<<<<<< HEAD
             profilePicSrc = "http://43.205.45.96/img/users/" + profilePicSrc;
+=======
+            profilePicSrc = "https://43.205.45.96/img/users/" + profilePicSrc;
+>>>>>>> origin/khushi
             Picasso.get().load(profilePicSrc.replace("https://","http://")).into(holder.profile);
         } catch (Exception e) {
             e.printStackTrace();

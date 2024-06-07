@@ -27,13 +27,22 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
+<<<<<<< HEAD
 import com.google.firebase.FirebaseApp;
+=======
+>>>>>>> origin/khushi
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.spacECE.spaceceedu.Authentication.Account;
 import com.spacECE.spaceceedu.Authentication.LoginActivity;
 import com.spacECE.spaceceedu.Authentication.UserLocalStore;
+<<<<<<< HEAD
+=======
+import com.spacECE.spaceceedu.ConsultUS.Consultant_Main;
+import com.spacECE.spaceceedu.LearnOnApp.LearnOn_Main;
+import com.spacECE.spaceceedu.LibForSmall.Library_main;
+>>>>>>> origin/khushi
 import com.spacECE.spaceceedu.Location.LocationService;
 import com.spacECE.spaceceedu.Utils.Notification;
 import com.spacECE.spaceceedu.Utils.UsefulFunctions;
@@ -104,17 +113,28 @@ public class MainActivity extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
         userLocalStore = new UserLocalStore(getApplicationContext());
+<<<<<<< HEAD
         //FirebaseApp.initializeApp(this);
 
         Log.i("DEVICE TOKEN","In next line");
+=======
+
+        Log.i("DEVICE TOKEN", "In next line");
+>>>>>>> origin/khushi
         //Android ID:
         //Log.i("DEVICE TOKEN : ",Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID));
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
 
+<<<<<<< HEAD
         if(authenticate()){
             getDetails();
         }
+=======
+        /*if (authenticate()) {
+            getDetails();
+        }*/
+>>>>>>> origin/khushi
 
         if (firstStart) {
             //causing crash on first boot TODO
@@ -138,17 +158,79 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //Firebase Cloud Messaging for PushNotification
+<<<<<<< HEAD
         //FirebaseMessaging.getInstance().subscribeToTopic("Notify");
 
         //Bottom navigation bar
         BottomNavigationView bottomNav = findViewById(R.id.Main_Bottom_Navigation);
         bottomNav.setOnItemSelectedListener(navListener);
+=======
+        try {
+            FirebaseMessaging.getInstance().subscribeToTopic("Notify");
+        } catch (Exception e) {
+            Log.e("onCreate:o;jbo;n", e.toString());
+        }
+
+
+        //Bottom navigation bar
+        /*BottomNavigationView bottomNav = findViewById(R.id.Main_Bottom_Navigation);
+        bottomNav.setOnItemSelectedListener(navListener);*/
+>>>>>>> origin/khushi
 
         //Navigation Drawer
         drawer = findViewById(R.id.Main_NavView_drawer);
 
+<<<<<<< HEAD
         //Toolbar support for navigationDrawer
         toolbar =  findViewById(R.id.toolbar);
+=======
+        View signUp = findViewById(R.id.rectangle_3);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(i);
+            }
+        });
+
+        View consult = findViewById(R.id.consultUsAction);
+        consult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Consultant_Main.class);
+                startActivity(i);
+            }
+        });
+
+        View libForSmall = findViewById(R.id.libForSmallAction);
+        libForSmall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Library_main.class);
+                startActivity(i);
+            }
+        });
+
+        View spaceTube = findViewById(R.id.spaceTubeAction);
+        spaceTube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, VideoLibrary_Activity.class);
+                startActivity(i);
+            }
+        });
+
+        View learnOnApp = findViewById(R.id.learnOnAppAction);
+        learnOnApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, LearnOn_Main.class);
+                startActivity(i);
+            }
+        });
+        //Toolbar support for navigationDrawer
+        /*toolbar =  findViewById(R.id.toolbar);
+>>>>>>> origin/khushi
         setSupportActionBar(toolbar);
 
         //NavigationDrawer
@@ -189,7 +271,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 //this is not working right now but this is to know when someone installs the app for the first time
+<<<<<<< HEAD
                 UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_token?email="+ACCOUNT.getAccount_id()+"&token="+token);
+=======
+                UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_token.php?email="+ACCOUNT.getAccount_id()+"&token="+token);
+>>>>>>> origin/khushi
             }
         });
         thread.start();
@@ -298,7 +384,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //make it 0 if not worked
+<<<<<<< HEAD
         PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 200, intent, PendingIntent.FLAG_IMMUTABLE);
+=======
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 200, intent, 0);
+>>>>>>> origin/khushi
 
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         long time = System.currentTimeMillis();
@@ -358,7 +448,35 @@ public class MainActivity extends AppCompatActivity {
             }
 
             return null;
+<<<<<<< HEAD
         }
+=======
+        }*/
+
+        NavigationBarView.OnItemSelectedListener navListener =
+                new NavigationBarView.OnItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        Fragment selectedFragment = null;
+
+                        switch (item.getItemId()) {
+                            case R.id.nav_home:
+                                selectedFragment = new FragmentMain();
+                                break;
+                            case R.id.nav_profile:
+                                selectedFragment = new FragmentProfile();
+                                break;
+                            case R.id.nav_help:
+                                selectedFragment = new FragmentAbout();
+                                break;
+                        }
+                        getSupportFragmentManager().beginTransaction().replace(R.id.Main_Fragment_layout,
+                                selectedFragment).commit();
+
+                        return true;
+                    }
+                };
+>>>>>>> origin/khushi
     }
 
 }
