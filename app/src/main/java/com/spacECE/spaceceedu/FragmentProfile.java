@@ -1,18 +1,25 @@
 package com.spacECE.spaceceedu;
 
+<<<<<<< HEAD
 import android.content.Intent;
+=======
+>>>>>>> origin/khushi
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+<<<<<<< HEAD
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+=======
+>>>>>>> origin/khushi
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+<<<<<<< HEAD
 import com.spacECE.spaceceedu.Authentication.Account;
 import com.spacECE.spaceceedu.Authentication.LoginActivity;
 
@@ -63,3 +70,13 @@ public class FragmentProfile extends Fragment {
         requireActivity().finish();
     }
 }
+=======
+public class FragmentProfile extends Fragment {
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_profile,container,false);
+    }
+}
+>>>>>>> origin/khushi

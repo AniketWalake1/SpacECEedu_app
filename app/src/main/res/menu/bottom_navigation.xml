@@ -8,12 +8,21 @@
 
     <item
         android:id="@+id/nav_profile"
+<<<<<<< HEAD
         android:icon="@drawable/profile_menu"
         android:title="Profile" />
 
     <item
         android:id="@+id/nav_help"
         android:icon="@drawable/mic"
+=======
+        android:icon="@drawable/user"
+        android:title="User" />
+
+    <item
+        android:id="@+id/nav_help"
+        android:icon="@drawable/help"
+>>>>>>> origin/khushi
         android:title="Help" />
 
 </menu>

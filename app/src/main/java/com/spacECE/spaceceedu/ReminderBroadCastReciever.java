@@ -23,6 +23,7 @@ public class ReminderBroadCastReciever extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
+<<<<<<< HEAD
 
 try{
     //int dayNo = intent.getExtras().getInt("EXTRA_DAY_NO");
@@ -57,6 +58,43 @@ try{
 }catch (Exception e){
     Log.e( "onReceive:---------------", e.toString());
 }
+=======
+        //int dayNo = intent.getExtras().getInt("EXTRA_DAY_NO");
+        //Log.d(TAG, "onReceive: Extra "+dayNo);
+        try{
+            DBController dbController = new DBController(context);
+            ActivityData lastActivity = dbController.getLastActivity();
+            int dayNo = dbController.isNewUser();
+            dayNo++;
+
+            Log.d(TAG, "onReceive: day"+dayNo);
+            GetRecentActivity getRecentActivity = new GetRecentActivity(dayNo);
+            getRecentActivity.execute();
+
+            String activityNo = lastActivity.getData().get(0).getActivityNo();
+            String activityName = lastActivity.getData().get(0).getActivityName();
+
+            Intent repeatingIntent = new Intent(context,ActivityDetailsActivity.class);
+            repeatingIntent.putExtra("EXTRA_ACTIVITY",lastActivity);
+            repeatingIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+            PendingIntent pendingIntent = PendingIntent.getActivity(context,200,repeatingIntent,PendingIntent.FLAG_UPDATE_CURRENT);
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "notify")
+                    .setSmallIcon(R.drawable.logo)
+                    .setContentIntent(pendingIntent)
+                    .setContentTitle("SpaceActive - Activity "+activityNo)
+                    .setContentText(activityName)
+                    .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+            NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(context);
+            notificationManagerCompat.notify(200, builder.build());
+            Log.d(TAG, "onReceive:notification sent ");
+        }catch (Exception e){
+            Log.e( "RemainderBroadCastReciever ",e.toString());
+        }
+
+>>>>>>> origin/khushi
 
 
     }
@@ -77,7 +115,11 @@ try{
 
             try {
 
+<<<<<<< HEAD
                 apiCall[0] = UsefulFunctions.UsingGetAPI("http://educationfoundation.space/spacece/api/spaceactive_activities.php?ano="+dayNo);
+=======
+                apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/api/spaceactive_activities.php?ano="+dayNo);
+>>>>>>> origin/khushi
                 Log.d(TAG, "Object Obtained "+apiCall[0].toString());
 
                 GsonBuilder gsonBuilder = new GsonBuilder();

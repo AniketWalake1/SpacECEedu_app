@@ -6,10 +6,17 @@
     android:layout_height="wrap_content"
     android:layout_centerInParent="true"
     android:layout_weight="1"
+<<<<<<< HEAD
     android:elevation="6.5dp"
     app:cardCornerRadius="10dp"
     android:background="@color/white"
     android:layout_margin="9.10dp">
+=======
+    android:elevation="@dimen/_5sdp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/white"
+    android:layout_margin="@dimen/_7sdp">
+>>>>>>> origin/khushi
 
     <LinearLayout
         android:layout_centerInParent="true"
@@ -23,7 +30,11 @@
             android:layout_width="match_parent"
             android:contentDescription="consult type pic"
             android:scaleType="fitXY"
+<<<<<<< HEAD
             android:layout_height="195dp"
+=======
+            android:layout_height="@dimen/_150sdp"
+>>>>>>> origin/khushi
             android:src="@drawable/img_5" />
 
         <TextView
@@ -34,7 +45,11 @@
             android:textAlignment="viewStart"
             android:textColor="@color/black"
             android:gravity="left"
+<<<<<<< HEAD
             android:textSize="26sp"
+=======
+            android:textSize="@dimen/_20ssp"
+>>>>>>> origin/khushi
             android:layout_gravity="center"
             android:text="Category" />
 

@@ -1,5 +1,6 @@
 package com.spacECE.spaceceedu.LibForSmall;
 
+<<<<<<< HEAD
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+=======
+import android.os.Bundle;
+import android.util.Log;
+>>>>>>> origin/khushi
 import androidx.appcompat.app.AppCompatActivity;
 import com.spacECE.spaceceedu.R;
 import com.spacECE.spaceceedu.Utils.UsefulFunctions;
@@ -33,7 +38,12 @@ public class My_books extends AppCompatActivity {
         Thread thread = new Thread(() -> {
 
             try {
+<<<<<<< HEAD
                 apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/libforsmall/api/api_bookrecords.php");
+=======
+                Log.e( "onCreate:123456789","1234567890");
+                apiCall[0] = UsefulFunctions.UsingGetAPI("http://43.205.45.96/ConsultUs/api_user_appoint.php?user=raju%20rastogi");
+>>>>>>> origin/khushi
                 try {
                     Log.i("Object Obtained: ", apiCall[0].get("data").toString());
                 } catch (JSONException e) {

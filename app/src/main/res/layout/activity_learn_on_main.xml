@@ -11,14 +11,24 @@
 
     <LinearLayout
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="60dp"
+=======
+        android:layout_height="wrap_content"
+>>>>>>> origin/khushi
         android:paddingLeft="15dp"
         android:orientation="horizontal">
 
         <ImageView
+<<<<<<< HEAD
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:srcCompat="@drawable/tile_icon_3" />
+=======
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/logo" />
+>>>>>>> origin/khushi
 
         <TextView
             android:layout_width="match_parent"
@@ -27,6 +37,7 @@
             android:padding="8dp"
             android:textStyle="bold"
             android:textColor="@color/black"
+<<<<<<< HEAD
             android:textSize="22dp"
             android:text="Learn on app"/>
 
@@ -47,6 +58,19 @@
         android:textSize="28dp"
         android:textStyle="bold"
         android:padding="6dp"/>
+=======
+            android:textSize="18dp"
+            android:text="SpaceECE"/>
+
+
+    </LinearLayout>
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:titleTextColor="@color/black"
+        android:title="All Courses" />
+>>>>>>> origin/khushi
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -58,11 +82,16 @@
         android:layout_width="match_parent"
         android:id="@+id/bottom_navigation_learn"
         android:layout_alignParentBottom="true"
+<<<<<<< HEAD
         app:itemIconSize="25dp"
         app:itemTextColor="@color/black"
         app:itemIconTint="@color/black"
         app:menu="@menu/navigation_menu"
         android:layout_height="80dp">
+=======
+        app:menu="@menu/navigation_menu"
+        android:layout_height="wrap_content">
+>>>>>>> origin/khushi
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 

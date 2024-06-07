@@ -28,8 +28,13 @@
 
         <Spinner
             android:id="@+id/Type"
+<<<<<<< HEAD
             android:layout_width="300dp"
             android:layout_height="50dp"
+=======
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+>>>>>>> origin/khushi
             android:layout_marginTop="56dp"
             android:prompt="@string/acs_filename"
             android:background="@drawable/rounded_edittext"
@@ -83,8 +88,13 @@
 
         <Spinner
             android:id="@+id/Consultant_Language"
+<<<<<<< HEAD
             android:layout_width="300dp"
             android:layout_height="50dp"
+=======
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+>>>>>>> origin/khushi
             android:layout_marginTop="24dp"
             android:background="@drawable/rounded_edittext"
             android:drawableLeft="@android:drawable/ic_menu_edit"
@@ -182,7 +192,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Mon"
                 android:textOn="Mon" />
 
@@ -193,7 +207,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Tue"
                 android:textOn="Tue" />
 
@@ -204,7 +222,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Wed"
                 android:textOn="Wed" />
 
@@ -215,7 +237,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Thu"
                 android:textOn="Thu" />
 
@@ -226,7 +252,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Fri"
                 android:textOn="Fri" />
 
@@ -237,7 +267,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Sat"
                 android:textOn="Sat" />
 
@@ -248,7 +282,11 @@
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
+<<<<<<< HEAD
                 android:background="@drawable/select_toggle_btn"
+=======
+                android:background="@drawable/toggle_bg"
+>>>>>>> origin/khushi
                 android:textOff="Sun"
                 android:textOn="Sun" />
 

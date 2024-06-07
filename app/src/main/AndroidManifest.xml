@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+<<<<<<< HEAD
+=======
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+>>>>>>> origin/khushi
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+>>>>>>> origin/khushi
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+>>>>>>> origin/khushi
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.CAMERA" />
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="android.permission.VIBRATE" />
+>>>>>>> origin/khushi
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -26,7 +48,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SpacECEedu"
         android:usesCleartextTraffic="true">
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/khushi
         <activity
             android:name=".Authentication.NumberVerification"
             android:exported="true" />
@@ -34,6 +59,7 @@
         <activity
             android:name=".ConsultUS.ConsultUs_SplashScreen"
             android:exported="true" />
+<<<<<<< HEAD
 
         <activity
             android:name=".LibForSmall.ChatUS"
@@ -67,10 +93,20 @@
         <activity
             android:name=".LibForSmall.library_my_books"
             android:exported="true" />
+=======
+        <activity android:name=".LibForSmall.ChatUS" />
+        <activity android:name=".VideoLibrary.VideoLibrary_Activity_SplashScreen" />
+        <activity android:name=".LibForSmall.AddBook" />
+        <activity android:name=".LearnOnApp.LearnDetailed" />
+        <activity android:name=".LearnOnApp.LearnOn_Main" />
+        <activity android:name=".LearnOnApp.LearnOn_List_SplashScreen" />
+        <activity android:name=".LibForSmall.library_my_books"/>
+>>>>>>> origin/khushi
 
         <activity
             android:name=".Authentication.ConsultantRegistrationInit"
             android:exported="true" />
+<<<<<<< HEAD
 
         <activity
             android:name=".Authentication.RegistrationSelection"
@@ -84,10 +120,28 @@
             android:name=".ConsultUS.Consultant_AppointmentConfirmation"
             android:exported="true" />
 
+=======
+        <activity
+            android:name=".LibForSmall.library_splash_screen"
+            android:exported="true" />
+        <activity
+            android:name=".LibForSmall.libraryDetailed"
+            android:exported="true" />
+        <activity
+            android:name=".Authentication.RegistrationSelection"
+            android:exported="true" />
+        <activity
+            android:name=".ConsultUS.Agoraa"
+            android:exported="true" />
+        <activity
+            android:name=".ConsultUS.Consultant_AppointmentConfirmation"
+            android:exported="true" />
+>>>>>>> origin/khushi
         <activity
             android:name=".Authentication.RegistrationFinal"
             android:exported="true"
             android:theme="@style/Theme.SpacECEedu.NoActionBar" />
+<<<<<<< HEAD
 
         <activity
             android:name=".ConsultUS.Consultant_GetAppointment"
@@ -101,6 +155,17 @@
             android:name=".ActivitiesListActivity"
             android:exported="true" />
 
+=======
+        <activity
+            android:name=".ConsultUS.Consultant_GetAppointment"
+            android:exported="true" />
+        <activity
+            android:name=".ConsultUS.Consultant_Main"
+            android:exported="true" />
+        <activity
+            android:name=".ActivitiesListActivity"
+            android:exported="true" />
+>>>>>>> origin/khushi
         <activity
             android:name=".ActivityDetailsActivity"
             android:exported="true" />
@@ -108,6 +173,7 @@
         <activity
             android:name=".ConsultUS.ConsultantProfile"
             android:exported="true" />
+<<<<<<< HEAD
 
         <activity
             android:name=".ConsultUS.ConsultantsLibrary"
@@ -133,18 +199,46 @@
             android:name=".LibForSmall.My_books"
             android:exported="true" />
 
+=======
+        <activity
+            android:name=".ConsultUS.ConsultantsLibrary"
+            android:exported="true" />
+        <activity
+            android:name=".VideoLibrary.TopicActivity"
+            android:exported="true" />
+        <activity
+            android:name=".VideoLibrary.VideoLibrary_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Authentication.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LibForSmall.Library_main"
+            android:exported="true" />
+        <activity
+            android:name=".LibForSmall.My_books"
+            android:exported="true" />
+>>>>>>> origin/khushi
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/khushi
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+<<<<<<< HEAD
         <receiver
             android:name=".ReminderBroadCastReciever"
             android:exported="false" />
+=======
+        <receiver android:name=".ReminderBroadCastReciever" />
+>>>>>>> origin/khushi
 
         <service
             android:name=".FirebaseMessageReceiver"
@@ -154,6 +248,7 @@
             </intent-filter>
         </service>
 
+<<<<<<< HEAD
         <receiver
             android:name=".Utils.Notification"
             android:exported="true" />
@@ -169,3 +264,10 @@
 
     </application>
 </manifest>
+=======
+        <receiver android:name=".Utils.Notification" />
+
+    </application>
+
+</manifest>
+>>>>>>> origin/khushi

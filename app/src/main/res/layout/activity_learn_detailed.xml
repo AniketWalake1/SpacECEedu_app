@@ -5,7 +5,11 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="#FFFFFF"
+=======
+    android:background="#EAEAEA"
+>>>>>>> origin/khushi
     tools:context=".LearnOnApp.LearnOn_Main">
 
     <LinearLayout
@@ -16,9 +20,15 @@
         android:orientation="horizontal">
 
         <ImageView
+<<<<<<< HEAD
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:src="@drawable/tile_icon_3" />
+=======
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo" />
+>>>>>>> origin/khushi
 
         <TextView
             android:layout_width="match_parent"
@@ -27,12 +37,18 @@
             android:padding="8dp"
             android:textStyle="bold"
             android:textColor="@color/black"
+<<<<<<< HEAD
             android:textSize="22dp"
             android:text="Learn on app"/>
+=======
+            android:textSize="18dp"
+            android:text="SpaceECE"/>
+>>>>>>> origin/khushi
 
 
     </LinearLayout>
 
+<<<<<<< HEAD
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,11 +57,19 @@
         android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_marginTop="20dp"/>
+=======
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:titleTextColor="@color/black"
+        android:title="All Courses" />
+>>>>>>> origin/khushi
 
 
 
     <LinearLayout
         android:layout_width="match_parent"
+<<<<<<< HEAD
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:orientation="vertical">
@@ -57,6 +81,34 @@
                 android:background="@drawable/learnonapp_coursedetails_background"
                 android:padding="@dimen/fragment_title_padding_10"
 
+=======
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="14dp"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Enrollment Details"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/Spacece_Yelloww"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="6dp"
+>>>>>>> origin/khushi
                 android:orientation="vertical">
 
 
@@ -65,6 +117,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
+<<<<<<< HEAD
                     android:textColor="@color/black"
                     android:text="Mathemattics and statistics"
                     android:textSize="30dp"
@@ -132,6 +185,33 @@
                         android:textColor="@color/black"
                         android:id="@+id/ShowCoursePrice"/>
                 </LinearLayout>
+=======
+                    android:textColor="@color/white"
+                    android:text="Mathemattics and statistics"/>
+
+                <TextView
+                    android:id="@+id/Detail_Mode_Type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:text="Online on whatsapp"/>
+
+                <TextView
+                    android:id="@+id/Detail_Starting"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="12dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:text="Starting on : blah blah"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+>>>>>>> origin/khushi
 
         <TextView
             android:layout_width="match_parent"
@@ -141,6 +221,7 @@
             android:textStyle="bold"
             android:text="Note"/>
 
+<<<<<<< HEAD
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="300dp">
@@ -150,12 +231,35 @@
            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textSize="14dp"
+=======
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:cardCornerRadius="16dp"
+            android:elevation="6dp">
+
+            <TextView
+                android:id="@+id/Detail_Description"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:textSize="14dp"
+>>>>>>> origin/khushi
                 android:textColor="@color/black"
                 android:padding="8dp"
                 android:text="hello world"/>
 
+<<<<<<< HEAD
                 </ScrollView>
             </LinearLayout>
+=======
+
+
+        </androidx.cardview.widget.CardView>
+
+>>>>>>> origin/khushi
 
 
 
@@ -190,7 +294,11 @@
                 android:layout_gravity="center_horizontal"
                 android:elevation="10dp"
                 android:padding="20dp"
+<<<<<<< HEAD
                 android:backgroundTint="@color/Spacece_Yelloww"
+=======
+                android:backgroundTint="@android:color/holo_green_dark"
+>>>>>>> origin/khushi
                 android:text="Enroll Now!" />
 
 

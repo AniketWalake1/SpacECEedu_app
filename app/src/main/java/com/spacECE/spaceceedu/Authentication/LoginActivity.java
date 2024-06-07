@@ -42,6 +42,11 @@ public class LoginActivity extends AppCompatActivity {
         //what is this?
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
+<<<<<<< HEAD
+=======
+        Log.e( "3 auth ","----------------------------------------------");
+
+>>>>>>> origin/khushi
         userLocalStore = new UserLocalStore(getApplicationContext());
 
         et_email = findViewById(R.id.editTextText_EmailAddress);
@@ -170,8 +175,13 @@ public class LoginActivity extends AppCompatActivity {
                                         }
                                         MainActivity.ACCOUNT = userLocalStore.getLoggedInAccount();
                                         finish();
+<<<<<<< HEAD
                                         Intent goToMainPage = new Intent(getApplicationContext(), MainActivity.class);
                                         startActivity(goToMainPage);
+=======
+//                                        Intent goToMainPage = new Intent(getApplicationContext(), MainActivity.class);
+//                                        startActivity(goToMainPage);
+>>>>>>> origin/khushi
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();

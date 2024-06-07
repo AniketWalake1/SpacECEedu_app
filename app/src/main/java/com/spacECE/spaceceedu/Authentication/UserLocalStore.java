@@ -2,6 +2,10 @@ package com.spacECE.spaceceedu.Authentication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+<<<<<<< HEAD
+=======
+import android.util.Log;
+>>>>>>> origin/khushi
 
 import com.spacECE.spaceceedu.Authentication.Account;
 
@@ -15,6 +19,11 @@ public class UserLocalStore {
     }
 
     public Account getLoggedInAccount() {
+<<<<<<< HEAD
+=======
+        Log.e( "7 auth ","----------------------------------------------");
+
+>>>>>>> origin/khushi
         String name = userLocalDatabase.getString("username", null);
         String account_id = userLocalDatabase.getString("account_id", null);
         String contact_number = userLocalDatabase.getString("contact_number", null);
@@ -27,6 +36,12 @@ public class UserLocalStore {
     }
 
     public void setUserLoggedIn(boolean loggedIn, Account account) {
+<<<<<<< HEAD
+=======
+
+        Log.e( "7 auth ","----------------------------------------------");
+
+>>>>>>> origin/khushi
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         if(account.isCONSULTANT()){
             spEditor.putBoolean("loggedIn", loggedIn);
@@ -36,6 +51,10 @@ public class UserLocalStore {
             spEditor.putString("UID", account.getuId());
             spEditor.putBoolean("isConsultant", account.isCONSULTANT());
             spEditor.putString("profile_pic", account.getProfile_pic());
+<<<<<<< HEAD
+=======
+            Log.e( "UserLocalStore",account.getProfile_pic()+"---link");
+>>>>>>> origin/khushi
             spEditor.putString("consultant_category", account.getConsultant_Category());
             spEditor.putString("consultant_office", account.getConsultant_Office());
             spEditor.putString("consultant_start_time", account.getConsultant_StartTime());

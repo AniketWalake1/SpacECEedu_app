@@ -4,11 +4,16 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     >
+=======
+    android:background="#F4F1F1">
+>>>>>>> origin/khushi
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
@@ -28,11 +33,37 @@
         android:padding="20dp"
         android:background="@drawable/registration_background"
         android:orientation="vertical">
+=======
+        android:paddingLeft="15dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="SpaceECE"/>
+
+    </LinearLayout>
+
+>>>>>>> origin/khushi
 
     <TextView
         android:id="@+id/registration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+        android:layout_marginTop="78dp"
+>>>>>>> origin/khushi
         android:padding="4dp"
         android:layout_centerHorizontal="true"
         android:text="@string/registration"
@@ -40,15 +71,50 @@
         android:textColor="@color/black"
         android:textAppearance="@style/registratio"
         android:gravity="top"
+<<<<<<< HEAD
         android:layout_marginBottom="15dp" />
+=======
+        />
+>>>>>>> origin/khushi
 
     <ImageView
         android:id="@+id/UserRegistration_ImageView_ProfilePic"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         android:layout_marginBottom="20dp"
         android:background="@drawable/profile" />
+=======
+        android:layout_marginTop="140dp"
+        android:background="@drawable/ellipise_5_in_login" />
+
+    <View
+        android:id="@+id/ellipse_4_register"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="149dp"
+        android:background="@drawable/ellipse_4_in_login" />
+
+    <View
+        android:id="@+id/ellipse_6_register"
+        android:layout_width="70dp"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="189dp"
+        android:background="@drawable/ellipse_6_in_login" />
+
+    <View
+        android:id="@+id/logo1_1"
+        android:layout_width="390dp"
+        android:layout_height="415dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="215dp"/>
+>>>>>>> origin/khushi
 
 
     <com.google.android.material.textfield.TextInputLayout
@@ -56,8 +122,15 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+<<<<<<< HEAD
         app:startIconDrawable="@drawable/ic_baseline_person_24"
         >
+=======
+        android:layout_marginTop="260dp"
+        android:padding="4dp"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        android:layout_marginEnd="20dp">
+>>>>>>> origin/khushi
 
         <EditText
             android:id="@+id/UserRegistration_editTextText_Name"
@@ -66,8 +139,12 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/rounded_edittext"
             android:hint="@string/enter_user_"
+<<<<<<< HEAD
             android:textColor="@color/black"
             android:shadowColor="@color/black"/>
+=======
+            android:textColor="@color/black" />
+>>>>>>> origin/khushi
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -76,8 +153,16 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/ic_baseline_local_phone_24">
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:padding="4dp"
+        app:startIconDrawable="@drawable/ic_baseline_local_phone_24"
+        android:layout_marginEnd="20dp">
+>>>>>>> origin/khushi
 
         <EditText
             android:id="@+id/UserRegistration_editTextText_PhoneNumber"
@@ -95,8 +180,16 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/ic_baseline_email_24">
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
+        android:padding="4dp"
+        app:startIconDrawable="@drawable/ic_baseline_email_24"
+        android:layout_marginEnd="20dp">
+>>>>>>> origin/khushi
 
         <EditText
             android:id="@+id/UserRegistration_editTextText_Email"
@@ -110,14 +203,29 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> origin/khushi
     <com.google.android.material.textfield.TextInputLayout
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:endIconMode="password_toggle"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="470dp"
+        app:endIconMode="password_toggle"
+        android:padding="4dp"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:layout_marginEnd="20dp">
+>>>>>>> origin/khushi
 
         <EditText
             android:id="@+id/UserRegistration_editTextText_Password"
@@ -136,9 +244,18 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         app:endIconMode="password_toggle"
         android:layout_marginTop="10dp"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
+=======
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="540dp"
+        app:endIconMode="password_toggle"
+        android:padding="4dp"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24"
+        android:layout_marginEnd="20dp">
+>>>>>>> origin/khushi
 
         <EditText
             android:id="@+id/UserRegistration_editTextText_Re_Password"
@@ -152,6 +269,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+<<<<<<< HEAD
         <TextView
             android:id="@+id/uploadImageError"
             android:layout_width="match_parent"
@@ -163,10 +281,13 @@
             android:visibility="invisible"
             android:textColor="@color/logError"/>
 
+=======
+>>>>>>> origin/khushi
     <Button
         android:id="@+id/UserRegistration_Button_Signup"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:background="@drawable/registration_background_btn"
         android:elevation="4dp"
         android:backgroundTint="#0A9999"
@@ -178,5 +299,18 @@
         android:textSize="20sp"
         android:textStyle="bold" />
     </LinearLayout>
+=======
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="630dp"
+        android:background="@drawable/rectangle_8_login_button"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:text="@string/register_si"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+>>>>>>> origin/khushi
 
 </RelativeLayout>
