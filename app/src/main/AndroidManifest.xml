@@ -8,14 +8,14 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.SET_ALARM" />
+
+    <uses-feature android:name="android.hardware.telephony" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_SMS" />
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
@@ -25,120 +25,91 @@
         android:roundIcon="@mipmap/ic_launcher_round_"
         android:supportsRtl="true"
         android:theme="@style/Theme.SpacECEedu"
+        android:enableOnBackInvokedCallback="true"
         android:usesCleartextTraffic="true">
-
+        <activity
+            android:name=".VideoLibrary.VideoLibrary_Activity_SplashScreen"
+            android:exported="false" />
         <activity
             android:name=".Authentication.NumberVerification"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.ConsultUs_SplashScreen"
             android:exported="true" />
-
         <activity
             android:name=".LibForSmall.ChatUS"
             android:exported="true" />
-
-        <activity android:name=".LibForSmall.library_splash_screen"
-
-            android:exported="true">
-
-        </activity>
-
+        <activity
+            android:name=".LibForSmall.library_splash_screen"
+            android:exported="true" />
         <activity
             android:name=".LibForSmall.AddBook"
             android:exported="true" />
-
         <activity
             android:name=".LearnOnApp.LearnDetailed"
             android:exported="true" />
-
         <activity
             android:name=".LearnOnApp.LearnOn_Main"
             android:exported="true" />
-        <activity android:name="com.spacECE.spaceceedu.LibForSmall.libraryDetailed"></activity>
-        <activity android:name=".LibForSmall.libraryDetailed"></activity>
-
+        <activity android:name=".LibForSmall.libraryDetailed" />
 
         <activity
             android:name=".LearnOnApp.LearnOn_List_SplashScreen"
             android:exported="true" />
-
         <activity
             android:name=".LibForSmall.library_my_books"
             android:exported="true" />
-
         <activity
             android:name=".Authentication.ConsultantRegistrationInit"
             android:exported="true" />
-
         <activity
             android:name=".Authentication.RegistrationSelection"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.Agoraa"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.Consultant_AppointmentConfirmation"
             android:exported="true" />
-
         <activity
             android:name=".Authentication.RegistrationFinal"
             android:exported="true"
             android:theme="@style/Theme.SpacECEedu.NoActionBar" />
-
         <activity
             android:name=".ConsultUS.Consultant_GetAppointment"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.Consultant_Main"
             android:exported="true" />
-
         <activity
             android:name=".ActivitiesListActivity"
             android:exported="true" />
-
         <activity
             android:name=".ActivityDetailsActivity"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.ConsultantProfile"
             android:exported="true" />
-
         <activity
             android:name=".ConsultUS.ConsultantsLibrary"
             android:exported="true" />
-
         <activity
             android:name=".VideoLibrary.TopicActivity"
             android:exported="true" />
         <activity
-            android:name=".VideoLibrary.VideoLibrary_Activity_SplashScreen"
-            android:exported="true"/>
-
-        <activity
             android:name=".VideoLibrary.VideoLibrary_Activity"
             android:exported="true" />
-
-
         <activity
             android:name=".Authentication.LoginActivity"
             android:exported="true" />
-
         <activity
             android:name=".LibForSmall.Library_main"
             android:exported="true" />
-
         <activity
             android:name=".LibForSmall.My_books"
             android:exported="true" />
 
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -167,9 +138,10 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="com.instamojo.android.activities.PaymentDetailsActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
     </application>
+
 </manifest>

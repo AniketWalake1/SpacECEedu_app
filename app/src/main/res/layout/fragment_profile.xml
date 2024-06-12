@@ -13,6 +13,7 @@
         android:src="@drawable/profile"
         android:layout_marginTop="50dp"/>
     <TextView
+        android:id="@+id/nameview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -42,7 +43,7 @@
         android:textStyle="bold"
         android:layout_marginTop="20dp"/>
     <TextView
-        android:id="@+id/ShowEmail_Profile"
+        android:id="@+id/email_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="email"
@@ -50,25 +51,7 @@
         android:layout_marginRight="30dp"
         android:textSize="25dp"
         android:textColor="@color/black" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mobile No."
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:textSize="25dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"/>
-    <TextView
-        android:id="@+id/ShowMobileNo_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mobile no"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:textSize="25dp"
-        android:textColor="@color/black" />
+
 
     <Button
         android:id="@+id/Signout_btn_profile"

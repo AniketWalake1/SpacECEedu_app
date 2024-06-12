@@ -43,10 +43,11 @@ public class RegistrationFinal extends AppCompatActivity {
     private static final int PERMISSION_CODE = 1001;
     private Uri picData = Uri.parse(String.valueOf(R.drawable.default_profilepic));
     private TextView uploadImageError;
+
     Toolbar toolbar;
     UserLocalStore userLocalStore;
 
-    String TYPE = "customer", LANGUAGE, ADDRESS, FEE, QUALIFICATION, START_TIME, END_TIME;
+    String TYPE = "customer", LANGUAGE, ADDRESS, FEE, QUALIFICATION, START_TIME, END_TIME, c_available_days;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,16 @@ public class RegistrationFinal extends AppCompatActivity {
         QUALIFICATION = intent.getStringExtra("Qualification");
         START_TIME = intent.getStringExtra("StartTime");
         END_TIME = intent.getStringExtra("EndTime");
+       c_available_days = intent.getStringExtra("c_available_days");
+
+        Log.d("RegistrationFinal", "TYPE: " + TYPE);
+        Log.d("RegistrationFinal", "LANGUAGE: " + LANGUAGE);
+        Log.d("RegistrationFinal", "ADDRESS: " + ADDRESS);
+        Log.d("RegistrationFinal", "FEE: " + FEE);
+        Log.d("RegistrationFinal", "QUALIFICATION: " + QUALIFICATION);
+        Log.d("RegistrationFinal", "START_TIME: " + START_TIME);
+        Log.d("RegistrationFinal", "END_TIME: " + END_TIME);
+        Log.d("RegistrationFinal", "c_available_days: " + c_available_days);
 
         Log.d("TAG", "onCreate: " + TYPE + " " + LANGUAGE + " " + ADDRESS + " " + FEE + " " + QUALIFICATION + " " + START_TIME + " " + END_TIME);
 
@@ -219,6 +230,9 @@ public class RegistrationFinal extends AppCompatActivity {
                 RequestBody formBody;
 
                 if (TYPE != null && LANGUAGE != null && ADDRESS != null && FEE != null && QUALIFICATION != null && START_TIME != null && END_TIME != null) {
+                    // Split the selected days string into an array
+                    String[] selectedDaysArray = c_available_days.split(",");
+
                     formBody = new MultipartBody.Builder()
                             .setType(MultipartBody.FORM)
                             .addFormDataPart("name", name)
@@ -233,8 +247,7 @@ public class RegistrationFinal extends AppCompatActivity {
                             .addFormDataPart("c_to_time", END_TIME)
                             .addFormDataPart("c_language", LANGUAGE)
                             .addFormDataPart("c_fee", FEE)
-                            .addFormDataPart("c_available_from", "Monday")
-                            .addFormDataPart("c_available_to", "Tuesday")
+                            .addFormDataPart("selectedItem", String.join(",", selectedDaysArray))
                             .addFormDataPart("c_qualification", QUALIFICATION)
                             .build();
                 } else {

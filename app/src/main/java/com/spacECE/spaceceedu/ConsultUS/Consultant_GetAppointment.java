@@ -28,6 +28,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.ParseException;
+import java.time.Clock;
 import java.util.Date;
 
 import static com.spacECE.spaceceedu.LearnOnApp.LearnOn_List_RecycleAdapter.orderID;
@@ -57,6 +58,7 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
     private Boolean Date_picked = false;
     private Boolean Time_picked = false;
     private String BOOKING_DAY, BOOKING_TIME;
+
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -180,7 +182,7 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
                     public void onDateSet(DatePicker view, int year,int monthOfYear, int dayOfMonth) {
                         Date_picked =true; //to mark date is pciked
                         date = dayOfMonth + "-" + (monthOfYear + 1) + "-" + year + " ";
-                        BOOKING_DAY = format("%04d:%02d:%02d ", year, (monthOfYear+1), dayOfMonth);
+                        BOOKING_DAY = format("%04d-%02d-%02d ", year, (monthOfYear+1), dayOfMonth);
                         calendar.setText(date);
 
                         if(!Time_picked){ //is time is not picked before launch time picker
@@ -225,6 +227,7 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
         if(Date_picked && Time_picked){
             try {
                 if(validTime(timing_from, timing_to, BOOKING_TIME)){
+
                     tv_confirmation.setText("Appointment will be booked on " + date+" at " + time);
                 } else {
                     Toast.makeText(getApplicationContext(), "Select A valid Time", Toast.LENGTH_SHORT).show();
@@ -250,6 +253,7 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
         System.out.println(String.valueOf(Duration));
         Log.e( "BookAppointment: 1",MainActivity.ACCOUNT.getAccount_id()+consultant_id+ BOOKING_DAY + BOOKING_TIME);
         Log.e( "BookAppointment: 2",String.valueOf(Duration));
+        Log.e("Date",BOOKING_DAY);
         new Thread(new Runnable() {
 
             JSONObject jsonObject;
@@ -262,8 +266,9 @@ public class Consultant_GetAppointment extends AppCompatActivity implements Inst
                 RequestBody fromBody = new FormBody.Builder()
                         .add("u_id", MainActivity.ACCOUNT.getAccount_id())
                         .add("c_id", consultant_id)
-                        .add("b_time", BOOKING_DAY + BOOKING_TIME)
                         .add("end_time", valueOf(Duration))
+                        .add("time", BOOKING_TIME)
+                        .add("b_date",BOOKING_DAY)
                         .build();
                 Log.e( "api hit at Consult_GetAppointment: ","u_id"+"="+MainActivity.ACCOUNT.getAccount_id()+"&"+"c_id="+consultant_id+"&b_time="+BOOKING_DAY + BOOKING_TIME+"&end_time="+valueOf(Duration));
 

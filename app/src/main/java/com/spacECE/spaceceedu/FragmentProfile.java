@@ -21,6 +21,7 @@ public class FragmentProfile extends Fragment {
     private TextView nameTextView;
     private Button signOutButton;
     private Button loginButton;
+    private TextView emailTextView, nameview;
 
     @Nullable
     @Override
@@ -28,13 +29,16 @@ public class FragmentProfile extends Fragment {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
         nameTextView = view.findViewById(R.id.ShowName_Profile);
+        emailTextView = view.findViewById(R.id.email_text_view);
         signOutButton = view.findViewById(R.id.Signout_btn_profile);
+        nameview = view.findViewById(R.id.nameview);
         loginButton = view.findViewById(R.id.Login_btn_profile); // Assuming you have a button with this ID in your layout
 
         Account account = MainActivity.ACCOUNT;
         if (account != null) {
             // User is logged in
             nameTextView.setText(account.getUsername());
+            emailTextView.setText(account.getAccount_id());
             signOutButton.setVisibility(View.VISIBLE);
             loginButton.setVisibility(View.GONE);
 
@@ -43,6 +47,8 @@ public class FragmentProfile extends Fragment {
             // User is not logged in
             nameTextView.setText("Not Logged In");
             signOutButton.setVisibility(View.GONE);
+            emailTextView.setVisibility(View.GONE);
+            nameview.setVisibility(View.GONE);
             loginButton.setVisibility(View.VISIBLE);
 
             loginButton.setOnClickListener(v -> {
