@@ -119,9 +119,9 @@ public class FragmentMain extends Fragment {
             @Override
             public void onClick(View v) {
                 UserLocalStore userLocalStore = new UserLocalStore(requireContext());
-                Account account = userLocalStore.getLoggedInAccount();
+                boolean account = userLocalStore.getUserLoggedIn();
                 // Check if the user is logged in (you can replace this condition with your actual login check)
-                if (account != null) {
+                if (account) {
                     Intent intent = new Intent(getContext(), GrowthTrackerHome.class);
                     startActivity(intent);
                 } else {
